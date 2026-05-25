@@ -138,6 +138,19 @@ print("PROCESSED_DIR:", PROCESSED_DIR)
 print("Existe dataset:", PROCESSED_DIR.exists())
 ```
 
+## Nota sobre rutas de ejecución
+
+Los notebooks fueron desarrollados en Google Colab conectado a un entorno de ejecución local mediante contenedor Docker y GPU local. Por este motivo, algunas rutas internas fueron definidas originalmente respecto de una carpeta base `/content/memoria`.
+
+Para reproducir el flujo sin modificar el código, se recomienda clonar el repositorio en Google Colab usando:
+
+```bash
+!git clone https://github.com/TU_USUARIO/Memoria-LSTM-SSI.git /content/memoria
+```
+
+Luego, el dataset procesado descargado desde la sección Releases debe descomprimirse de modo que quede disponible en:
+/content/memoria/processed_step_full_v2/
+
 ## Autor
 
 **Ricardo Álvarez**  
