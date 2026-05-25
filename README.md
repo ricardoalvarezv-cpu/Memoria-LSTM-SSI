@@ -12,7 +12,7 @@ El flujo computacional se organiza en cuatro notebooks principales:
 
 | Notebook | Descripción |
 |---|---|
-| `Ordenamiento_IN`s_&_OUT`s.ipynb` | Procesamiento inicial de datos, lectura de registros y salidas de simulación, ordenamiento de variables de entrada y salida, y generación de archivos `.npz` por evento. |
+| Ordenamiento_INs_OUTs.ipynb | Procesamiento inicial de datos, lectura de registros y salidas de simulación, ordenamiento de variables de entrada y salida, y generación de archivos `.npz` por evento. |
 | `LSTM_Teacher.ipynb` | Entrenamiento y evaluación del modelo `LSTM_Teacher`, utilizando variables completas del sistema suelo–estructura. |
 | `LSTM_Student.ipynb` | Entrenamiento y evaluación de los modelos `LSTM_Student`, orientados a reducir la cantidad de variables de entrada respecto del modelo Teacher. |
 | `Resultados.ipynb` | Consolidación de resultados, inferencia de modelos entrenados, cálculo de métricas y generación de figuras comparativas. |
@@ -55,10 +55,13 @@ scikit-learn
 torch
 pathlib
 glob
+```
 
 ## Estructura esperada de carpetas
 
 Durante el desarrollo del trabajo, los notebooks fueron configurados para trabajar con una estructura base similar a la siguiente:
+
+```text
 /content/memoria/
 │
 ├── Time Series Records_MACRO.xlsm
@@ -73,6 +76,7 @@ Durante el desarrollo del trabajo, los notebooks fueron configurados para trabaj
 └── runs_colab/
     ├── runs_notebook_B_teacher/
     └── runs_notebook_A_student/
+```
 
 ## Consideraciones metodológicas
 
@@ -80,12 +84,12 @@ El flujo implementado considera separación de datos a nivel de evento sísmico,
 
 Las métricas utilizadas en la evaluación incluyen principalmente:
 
-RMSE.
-MAE, cuando corresponde.
-Sesgo o bias.
-Coeficiente de correlación.
-Error relativo en peak.
-Tiempo de inferencia o duración de predicción, cuando corresponde.
+- RMSE.
+- MAE, cuando corresponde.
+- Sesgo o bias.
+- Coeficiente de correlación.
+- Error relativo en peak.
+- Tiempo de inferencia o duración de predicción, cuando corresponde.
 
 ## Alcance
 
@@ -95,6 +99,6 @@ Cualquier aplicación a nuevos casos de estudio requiere regenerar el dataset co
 
 ## Autor
 
-Ricardo Álvarez
-Memoria de título — Ingeniería Civil
+**Ricardo Álvarez**  
+Memoria de título — Ingeniería Civil  
 Universidad Técnica Federico Santa María
