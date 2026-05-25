@@ -97,6 +97,47 @@ Este repositorio no corresponde a un software final de uso general, sino a un co
 
 Cualquier aplicación a nuevos casos de estudio requiere regenerar el dataset con registros sísmicos, modelos numéricos, variables de entrada y variables de salida coherentes con el nuevo sistema suelo–estructura analizado.
 
+## Dataset procesado
+
+El dataset procesado requerido para ejecutar los notebooks se encuentra disponible como archivo complementario en la sección **Releases** del repositorio:
+
+[Descargar dataset procesado](PEGA_AQUI_EL_LINK_DEL_ZIP)
+
+Para ejecutar los notebooks en Google Colab, se recomienda clonar el repositorio en `/content/memoria` y descomprimir el dataset en esa misma ruta, de modo que la estructura final sea:
+
+```text
+/content/memoria/
+├── LSTM_Teacher.ipynb
+├── LSTM_Student.ipynb
+├── Resultados.ipynb
+├── Ordenamiento_INs_OUTs.ipynb
+└── processed_step_full_v2/
+    ├── EQ001.npz
+    ├── EQ002.npz
+    └── ...
+```
+
+## Celda para descomprimir en Colab
+
+Agrega esta celda al inicio de los notebooks, o al README:
+
+```python
+from pathlib import Path
+import zipfile
+
+ROOT = Path("/content/memoria")
+ZIP_PATH = ROOT / "processed_step_full_v2.zip"
+PROCESSED_DIR = ROOT / "processed_step_full_v2"
+
+if ZIP_PATH.exists() and not PROCESSED_DIR.exists():
+    with zipfile.ZipFile(ZIP_PATH, "r") as zip_ref:
+        zip_ref.extractall(ROOT)
+
+print("ROOT:", ROOT)
+print("PROCESSED_DIR:", PROCESSED_DIR)
+print("Existe dataset:", PROCESSED_DIR.exists())
+```
+
 ## Autor
 
 **Ricardo Álvarez**  
