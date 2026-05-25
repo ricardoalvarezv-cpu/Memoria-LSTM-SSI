@@ -103,6 +103,7 @@ El dataset procesado requerido para ejecutar los notebooks se encuentra disponib
 
 [Descargar dataset procesado] https://github.com/ricardoalvarezv-cpu/Memoria-LSTM-SSI/releases/download/v1.0-dataset/processed_step_full_v2.zip
 [Descargar excel eventos] https://github.com/ricardoalvarezv-cpu/Memoria-LSTM-SSI/releases/download/v1.0-dataset/Time.Series.Records_MACRO.xlsm
+[Descargar runs colab] https://github.com/ricardoalvarezv-cpu/Memoria-LSTM-SSI/releases/download/v2.0-dataset/runs_colab.zip
 
 Para ejecutar los notebooks en Google Colab, se recomienda clonar el repositorio en `/content/memoria` y descomprimir el dataset en esa misma ruta, de modo que la estructura final sea:
 
