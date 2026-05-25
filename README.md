@@ -101,7 +101,8 @@ Cualquier aplicación a nuevos casos de estudio requiere regenerar el dataset co
 
 El dataset procesado requerido para ejecutar los notebooks se encuentra disponible como archivo complementario en la sección **Releases** del repositorio:
 
-[Descargar dataset procesado](PEGA_AQUI_EL_LINK_DEL_ZIP)
+[Descargar dataset procesado](sha256:a812d6a7e8b524ca23531d5e5df9a200af17b9f764e9dd1fd8b5698212ceba8a)
+[Descargar excel eventos](sha256:e4423a3c4569037de99ebb5ceeacadd33477cd05ee965e85eb8eb6250acc3945)
 
 Para ejecutar los notebooks en Google Colab, se recomienda clonar el repositorio en `/content/memoria` y descomprimir el dataset en esa misma ruta, de modo que la estructura final sea:
 
@@ -119,7 +120,6 @@ Para ejecutar los notebooks en Google Colab, se recomienda clonar el repositorio
 
 ## Celda para descomprimir en Colab
 
-Agrega esta celda al inicio de los notebooks, o al README:
 
 ```python
 from pathlib import Path
